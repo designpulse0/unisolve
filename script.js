@@ -1,19 +1,16 @@
 // main.js
 
-// اختر زر الهامبرغر والقائمة الجانبية
+// فتح/إغلاق القائمة الجانبية
 const hamburger = document.querySelector('.hamburger');
 const mobileNav = document.querySelector('.mobile-nav');
 
-// تعرّف على حدث النقر لفتح/إغلاق القائمة الجانبية
 hamburger.addEventListener('click', () => {
   mobileNav.classList.toggle('open');
-  // بدل الأيقونة بين شريط (bars) وإغلاق (times)
   const icon = hamburger.querySelector('i');
   icon.classList.toggle('fa-bars');
   icon.classList.toggle('fa-times');
 });
 
-// إغلاق القائمة عند النقر خارجها
 document.addEventListener('click', (e) => {
   if (!hamburger.contains(e.target) && !mobileNav.contains(e.target)) {
     mobileNav.classList.remove('open');
@@ -21,18 +18,14 @@ document.addEventListener('click', (e) => {
   }
 });
 
-// إضافة السلاسة في التمرير وإغلاق القائمة عند اختيار رابط
+// تنقل سلس عند الضغط على الروابط
 document.querySelectorAll('.nav-link').forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
-
-    // إذا كانت القائمة مفتوحة، أوقفها وأعد الأيقونة إلى bars
     if (mobileNav.classList.contains('open')) {
       mobileNav.classList.remove('open');
       hamburger.querySelector('i').classList.replace('fa-times','fa-bars');
     }
-
-    // التمرير إلى القسم المستهدف مع تعويض ارتفاع الهيدر
     const targetId = link.getAttribute('href').substring(1);
     const target = document.getElementById(targetId);
     if (target) {
@@ -45,3 +38,11 @@ document.querySelectorAll('.nav-link').forEach(link => {
     }
   });
 });
+
+// معالجة إرسال النموذج وعرض رسالة نجاح
+function handleOrder(event) {
+  event.preventDefault();
+  // هنا يمكنك إضافة منطق إرسال البيانات عبر AJAX أو API
+  alert('تم استلام طلبك بنجاح! سيصلك الرد خلال دقيقة إلى 24 ساعة.');
+  event.target.reset();
+}
