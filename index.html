@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -11,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- HEADER & NAV -->
   <header class="header">
     <div class="container navbar">
       <div class="logo">
@@ -19,8 +21,11 @@
       <ul class="nav-links">
         <li><a class="nav-link" href="#home">الرئيسية</a></li>
         <li><a class="nav-link" href="#services">الخدمات</a></li>
+        <li><a class="nav-link" href="#pricing">الأسعار</a></li>
+        <li><a class="nav-link" href="#order">اطلب الآن</a></li>
         <li><a class="nav-link" href="#about">من نحن</a></li>
-        <li><a class="nav-link" href="#payment">الدفع</a></li>
+        <li><a class="nav-link" href="#policies">السياسات</a></li>
+        <li><a class="nav-link" href="#faq">الأسئلة الشائعة</a></li>
         <li><a class="nav-link" href="#contact">اتصل بنا</a></li>
       </ul>
       <button class="hamburger" aria-label="فتح القائمة">
@@ -33,12 +38,16 @@
     <ul>
       <li><a class="nav-link" href="#home">الرئيسية</a></li>
       <li><a class="nav-link" href="#services">الخدمات</a></li>
+      <li><a class="nav-link" href="#pricing">الأسعار</a></li>
+      <li><a class="nav-link" href="#order">اطلب الآن</a></li>
       <li><a class="nav-link" href="#about">من نحن</a></li>
-      <li><a class="nav-link" href="#payment">الدفع</a></li>
+      <li><a class="nav-link" href="#policies">السياسات</a></li>
+      <li><a class="nav-link" href="#faq">الأسئلة الشائعة</a></li>
       <li><a class="nav-link" href="#contact">اتصل بنا</a></li>
     </ul>
   </nav>
 
+  <!-- HERO -->
   <section class="hero section" id="home">
     <div class="container" data-aos="fade-up">
       <h1><span class="text-gradient">Uni</span><span class="highlight">Solve</span></h1>
@@ -50,60 +59,189 @@
     </div>
   </section>
 
+  <!-- SERVICES -->
   <section class="section" id="services">
     <div class="container" data-aos="zoom-in-up">
       <h2 class="section-title">خدماتنا</h2>
       <p class="section-subtitle">نقدّم لك الأفضل دائماً</p>
       <div class="services-grid">
-        <div class="service-card auto-service active">
+        <div class="service-card" data-aos="fade-up">
           <div class="service-icon"><i class="fas fa-file-alt"></i></div>
-          <h3>إعداد الأبحاث والتقارير</h3>
+          <h3>كتابة بحث جامعي</h3>
+          <p class="price">150 ₪ (~40 USD، 28 JOD)</p>
+          <a href="#order" class="btn btn-primary btn-sm">اطلب الآن</a>
         </div>
-        <div class="service-card auto-service">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-icon"><i class="fas fa-file-alt"></i></div>
+          <h3>تقرير جامعي</h3>
+          <p class="price">80 ₪ (~21 USD، 15 JOD)</p>
+          <a href="#order" class="btn btn-primary btn-sm">اطلب الآن</a>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
           <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
-          <h3>إعداد مشاريع التخرج</h3>
+          <h3>مشروع تخرج</h3>
+          <p class="price">1000 ₪ (~270 USD، 190 JOD)</p>
+          <a href="#order" class="btn btn-primary btn-sm">اطلب الآن</a>
         </div>
-        <div class="service-card auto-service">
-          <div class="service-icon"><i class="fas fa-lightbulb"></i></div>
-          <h3>تقديم أفكار إبداعية</h3>
-        </div>
-        <div class="service-card">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
           <div class="service-icon"><i class="fas fa-check-circle"></i></div>
           <h3>تدقيق لغوي وتحسين جودة</h3>
+          <p class="price">50 ₪ (~13 USD، 9 JOD)</p>
+          <a href="#order" class="btn btn-primary btn-sm">اطلب الآن</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="about">
-    <div class="container about-content" data-aos="fade-left">
-      <h2 class="section-title">من نحن</h2>
-      <p>نحن فريق أكاديمي مختص في تقديم أفضل الخدمات للطلبة الجامعيين في جميع المجالات الدراسية، نهدف لمساعدتك على تحقيق النجاح الأكاديمي بسهولة واحترافية.</p>
-      <ul class="about-features">
-        <li>خبرة واسعة في كتابة الأبحاث</li>
-        <li>فريق متخصص بكل المجالات</li>
-        <li>خدمة موثوقة وسرعة في الإنجاز</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section" id="payment">
-    <div class="container" data-aos="flip-right">
-      <h2 class="section-title">طرق الدفع</h2>
-      <p class="section-subtitle">نقبل طرق دفع متعددة لتسهيل الخدمة</p>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon"><i class="fab fa-cc-visa"></i></div>
-          <h3>Visa / MasterCard</h3>
+  <!-- PRICING -->
+  <section class="section" id="pricing">
+    <div class="container" data-aos="flip-left">
+      <h2 class="section-title">الأسعار التفصيلية</h2>
+      <p class="section-subtitle">اختر ما يناسبك من باقاتنا</p>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>كتابة بحث جامعي</h3>
+          <p class="price-large">150 ₪</p>
+          <p class="price-small">(~40 USD، 28 JOD)</p>
         </div>
-        <div class="service-card">
-          <div class="service-icon"><i class="fab fa-paypal"></i></div>
-          <h3>PayPal</h3>
+        <div class="pricing-card">
+          <h3>تقرير جامعي</h3>
+          <p class="price-large">80 ₪</p>
+          <p class="price-small">(~21 USD، 15 JOD)</p>
+        </div>
+        <div class="pricing-card">
+          <h3>مشروع تخرج</h3>
+          <p class="price-large">1000 ₪</p>
+          <p class="price-small">(~270 USD، 190 JOD)</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ORDER FORM -->
+  <section class="section" id="order">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title">اطلب خدمتك الآن</h2>
+      <form class="order-form" onsubmit="handleOrder(event)">
+        <label for="service">اختر الخدمة:</label>
+        <select id="service" name="service" required>
+          <option value="research">كتابة بحث جامعي - 150 ₪</option>
+          <option value="report">تقرير جامعي - 80 ₪</option>
+          <option value="project">مشروع تخرج - 1000 ₪</option>
+          <option value="proofreading">تدقيق لغوي - 50 ₪</option>
+        </select>
+
+        <label for="specialization">التخصص:</label>
+        <input list="specializations" id="specialization" name="specialization" placeholder="اختر التخصص" required>
+        <datalist id="specializations">
+          <option>أمن المعلومات</option>
+          <option>إدارة الأعمال</option>
+          <option>اقتصاد الاعمال</option>
+          <option>الأحياء</option>
+          <option>الإدارة العامة</option>
+          <option>الإعلام</option>
+          <option>الاتصال الاستراتيجي</option>
+          <option>الاحياء والتكنولوجيا الحيوية</option>
+          <option>الاقتصاد</option>
+          <option>التربية الرياضية</option>
+          <option>الترجمة</option>
+          <option>التسويق</option>
+          <option>التصميم</option>
+          <option>التصميم الداخلي</option>
+          <option>التعليم الجامع والتربية الخاصة</option>
+          <option>التغذية والحمية</option>
+          <option>التمريض</option>
+          <option>الرسوم المتحركة وصناعة السنما</option>
+          <option>الرياضيات</option>
+          <option>الرياضيات التطبيقية في الاقتصاد</option>
+          <option>الصيدلة</option>
+          <option>العلاقات الدولية</option>
+          <option>العلوم الطبية المخبرية</option>
+          <option>العلوم المالية الاكتوارية</option>
+          <option>العلوم المالية والمصرفية</option>
+          <option>الفنون البصرية المعاصرة</option>
+          <option>الفيزياء</option>
+          <option>القانون</option>
+          <option>الكيمياء</option>
+          <option>اللغة الانجليزية وآدابها</option>
+          <option>اللغة الفرنسية</option>
+          <option>المحاسبة</option>
+          <option>الموسيقى</option>
+          <option>الهندسة البيئية</option>
+          <option>الهندسة الكهرابئية</option>
+          <option>الهندسة المدنية</option>
+          <option>الهندسة المعمارية</option>
+          <option>الهندسة الميكانيكة</option>
+          <option>تعليم اللغة الإنجليزية كلفة أجنبية</option>
+          <option>جيوانفورماتكس</option>
+          <option>دكتور صيدلي</option>
+          <option>علاج النطق والسمع</option>
+          <option>علم الاجتماع</option>
+          <option>علم الحاسوب</option>
+          <option>علوم الأدلة الجنائية</option>
+          <option>علوم النانو</option>
+          <option>معلم المرحلة الأساسية العليا- تعليم الاجتماعيات</option>
+          <option>معلم المرحلة الأساسية العليا- تعليم التكنولوجيا</option>
+          <option>معلم المرحلة الأساسية العيلا- تعليم الرياضيات</option>
+          <option>ملعلم المرحلة الأساسية العليا- تعليم العلوم</option>
+          <option>هندسة أنظمة الحاسوب</option>
+          <option>هندسة البناء</option>
+          <option>هندسة التخطيط والتصميم الحضري</option>
+          <option>هندسة الحاسوب</option>
+          <option>هندسة المركبات الحديثة</option>
+          <option>هندسة الميكاترونيكس</option>
+        </datalist>
+
+        <label for="files">رفع الملفات (إن وجد):</label>
+        <input type="file" id="files" name="files" multiple>
+
+        <label for="notes">ملاحظات إضافية:</label>
+        <textarea id="notes" name="notes" rows="5" placeholder="اكتب ملاحظاتك هنا..."></textarea>
+
+        <button type="submit" class="btn btn-primary">إرسال الطلب</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- POLICIES -->
+  <section class="section" id="policies">
+    <div class="container" data-aos="fade-right">
+      <h2 class="section-title">السياسات</h2>
+      <div class="policies-content">
+        <article>
+          <h3>سياسة الخصوصية</h3>
+          <p>نحترم خصوصية بياناتك الشخصية ونلتزم بعدم مشاركتها مع أي طرف ثالث دون إذنك.</p>
+        </article>
+        <article>
+          <h3>شروط الاستخدام</h3>
+          <p>باستخدامك لموقعنا، توافق على شروطنا وتلتزم بعدم استخدام الخدمات لأي غرض غير قانوني.</p>
+        </article>
+        <article>
+          <h3>سياسة استرجاع الأموال</h3>
+          <p>إذا لم تكن راضيًا عن الخدمة، يمكنك طلب استرداد الأموال خلال 7 أيام من التسليم.</p>
+        </article>
+        <article>
+          <h3>حقوق النشر</h3>
+          <p>جميع المحتويات المقدمة لك شاملة حقوق الطبع والنشر. يُمنع إعادة نشرها دون إذن.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container" data-aos="zoom-in">
+      <h2 class="section-title">الأسئلة الشائعة</h2>
+      <div class="faq-content">
+        <p><strong>مدة التسليم:</strong> تتم خلال دقيقة إلى 24 ساعة حسب حجم الخدمة.</p>
+        <p><strong>طرق الدفع المقبولة:</strong> فيزا، ماستركارد، PayPal.</p>
+        <p><strong>كيف أتابع طلبي؟</strong> يمكنك التواصل معنا عبر البريد الإلكتروني أو الواتساب.</p>
+        <p><strong>هل تضمنون السرية؟</strong> نعم، نلتزم بأعلى معايير السرية والأمان.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
   <section class="section" id="contact">
     <div class="container" data-aos="fade-up">
       <h2 class="section-title">اتصل بنا</h2>
@@ -115,6 +253,7 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-content">
       <div class="footer-logo">
@@ -125,8 +264,11 @@
         <h4>روابط مهمة</h4>
         <ul>
           <li><a href="#services">الخدمات</a></li>
+          <li><a href="#pricing">الأسعار</a></li>
+          <li><a href="#order">اطلب الآن</a></li>
           <li><a href="#about">من نحن</a></li>
-          <li><a href="#payment">الدفع</a></li>
+          <li><a href="#policies">السياسات</a></li>
+          <li><a href="#faq">الأسئلة الشائعة</a></li>
           <li><a href="#contact">اتصل بنا</a></li>
         </ul>
       </div>
@@ -137,7 +279,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2025 UniSolve. جميع الحقوق محفوظة.</p>
+      <p>&copy; 2025 UniSolve. جميع الحقوق محفوظة</p>
       <p class="programmed-by">Programmed by Ahmad Alqadomi</p>
     </div>
   </footer>
