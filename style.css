@@ -1,105 +1,57 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Tajawal', sans-serif;
-}
+/* ===== القواعد العامة ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Tajawal', sans-serif; }
+body { background-color: #f4f7fa; color: #1c2d3f; scroll-behavior: smooth; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+.container { width: 90%; max-width: 1200px; margin: auto; }
+.section { padding: 80px 0; text-align: center; }
+.section-title { font-size: 2.5rem; color: #1c2d3f; margin-bottom: 10px; }
+.section-subtitle { color: #6c7a89; margin-bottom: 40px; font-size: 1.1rem; }
 
-body {
-  background-color: #f4f7fa;
-  color: #1c2d3f;
-  scroll-behavior: smooth;
-}
+/* ===== الهيدر ===== */
+.header { background-color: white; box-shadow: 0 4px 20px rgba(0,0,0,0.05); padding: 20px 0; position: sticky; top: 0; z-index: 1000; }
+.navbar { display: flex; align-items: center; justify-content: space-between; }
+.logo img { height: 100px; }
+.nav-links { display: flex; gap: 25px; }
+.nav-link { font-weight: bold; transition: 0.3s; }
+.nav-link:hover { color: #f57c00; }
+.hamburger { display: none; background: none; border: none; }
+.hamburger i { font-size: 1.8rem; cursor: pointer; }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
+/* ===== القائمة الجانبية للجوال ===== */
+.mobile-nav { display: none; position: fixed; top: 0; right: 0; width: 280px; height: 100vh; background: white; box-shadow: -4px 0 20px rgba(0,0,0,0.1); transform: translateX(100%); transition: transform 0.3s ease; z-index: 1500; padding-top: 80px; }
+.mobile-nav.open { transform: translateX(0); }
+.mobile-nav ul { padding: 0 20px; }
+.mobile-nav li { margin: 20px 0; }
+.mobile-nav a { font-size: 1.2rem; color: #1c2d3f; }
 
-ul {
-  list-style: none;
-}
+/* ===== البطل ===== */
+.hero { background: linear-gradient(to bottom right, #f4f7fa, #e2eaf3); padding: 100px 0; }
+.hero h1 { font-size: 3.5rem; margin-bottom: 20px; }
+.text-gradient { color: #f57c00; }
+.highlight { color: #1c2d3f; }
+.hero-buttons { display: flex; justify-content: center; gap: 20px; margin-top: 30px; }
+.btn { padding: 12px 30px; border-radius: 30px; font-weight: bold; transition: 0.3s ease; font-size: 1rem; }
+.btn-primary { background-color: #f57c00; color: white; border: none; }
+.btn-outline { background-color: transparent; border: 2px solid #f57c00; color: #f57c00; }
+.btn-primary:hover { background-color: #e46a00; }
+.btn-outline:hover { background-color: #f57c00; color: white; }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
+/* ===== الخدمات ===== */
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 30px; }
+.service-card { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.3s; }
+.service-card:hover { transform: translateY(-8px); }
+.service-icon { font-size: 2.5rem; color: #f57c00; margin-bottom: 15px; }
 
-.section {
-  padding: 80px 0;
-  text-align: center;
-}
+/* ===== من نحن ===== */
+.about-content p, .about-content ul { text-align: right; max-width: 700px; margin: auto; font-size: 1.1rem; color: #1b1954; }
+.about-features li { margin-bottom: 10px; }
 
-.section-title {
-  font-size: 2.5rem;
-  color: #1c2d3f;
-  margin-bottom: 10px;
-}
+/* ===== الدفع ===== ===== */
+/* نفس تنسيق الخدمات */
 
-.section-subtitle {
-  color: #6c7a89;
-  margin-bottom: 40px;
-  font-size: 1.1rem;
-}
-
-/* الهيدر */
-.header {
-  background-color: white;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  padding: 20px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo img {
-  height: 100px;
-}
-
-.nav-links {
-  display: flex;
-  gap: 25px;
-}
-
-.nav-link {
-  font-weight: bold;
-  color: #1c2d3f;
-  transition: 0.3s;
-}
-
-.nav-link:hover {
-  color: #f57c00;
-}
-
-/* إخفاء الهامبرغر والقائمة الجانبية على الديسكتوب */
-.mobile-nav,
-.hamburger {
-  display: none;
-}
-
-/* زرّ الهامبرغر */
-.hamburger i {
-  font-size: 1.8rem;
-  cursor: pointer;
-}
-
-/* البطل */
-.hero {
-  background: linear-gradient(to bottom right, #f4f7fa, #e2eaf3);
-  padding: 100px 0;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 3.5rem;
-  margin-bottom: 20px;
-}
-
-.text-gradient {
+/* ===== الفوتر ===== ===== */
+.footer { background-color: #a84d15; color: white; padding: 25px 10px; }
+.footer-content { display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; align-items: flex-start; }
+.footer-logo img { height: 100px; margin-bottom: 0; }
+.footer-logo p { color: #d1d1</p></footer-bottom>```
