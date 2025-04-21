@@ -110,13 +110,6 @@ ul {
 .mobile-nav ul {
   padding: 0 20px;
 }
-.mobile-nav li {
-  margin: 20px 0;
-}
-.mobile-nav a {
-  font-size: 1.2rem;
-  color: #1c2d3f;
-}
 
 /* ======= قسم البطل (Hero) ======= */
 .hero {
@@ -201,7 +194,9 @@ ul {
 }
 
 /* ======= الدفع ======= */
-/* تستخدم نفس تنسيق الخدمات */
+#payment .service-icon {
+  font-size: 2.2rem !important;
+}
 
 /* ======= الفوتر ======= */
 .footer {
@@ -251,54 +246,49 @@ ul {
 
 /* ======= استجابة الجوال (≤768px) ======= */
 @media (max-width: 768px) {
-  /* حاوية كاملة وعزل padding جانبي */
   .container {
     width: 100%;
     padding: 0 16px;
   }
-  /* إخفاء روابط الكمبيوتر وإظهار الهامبرغر */
   .nav-links {
     display: none;
   }
   .hamburger {
     display: block;
   }
-  /* عرض القائمة الجانبية */
   .mobile-nav {
-    display: block;
-    width: 100%;
-    padding-top: 60px;
-  }
-  .mobile-nav ul {
-    margin: 0;
+    width: 70%;
+    padding-top: 80px;
+    overflow-y: auto;
   }
   .mobile-nav li {
-    margin: 12px 0;
+    margin: 15px 0;
+    text-align: right;
+    padding: 0 20px;
   }
-  /* ضبط الشبكات والبطاقة والفوتر */
-  .hero-buttons,
-  .services-grid,
+  .hero {
+    padding: 60px 0 !important;
+  }
+  .services-grid, #payment .services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
   .footer-content {
-    display: flex;
     flex-direction: column;
-    gap: 16px;
+    align-items: center;
     text-align: center;
   }
-  .hero h1 {
-    font-size: 2rem;
+  .footer-links, .footer-contact {
+    margin-top: 25px;
   }
-  .section-title {
-    font-size: 2rem;
+  html {
+    overflow-x: hidden;
   }
-  .section-subtitle {
-    font-size: 1rem;
-  }
-  .services-grid {
-    grid-template-columns: 1fr !important;
+  body {
+    position: relative;
   }
 }
 
-/* ======= تحسين الفوتر للشاشات الكبيرة (≥769px) ======= */
 @media (min-width: 769px) {
   .footer-content {
     display: flex;
