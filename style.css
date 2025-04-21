@@ -78,6 +78,42 @@ ul {
   color: #f57c00;
 }
 
+/* زرّ الهامبرغر (مخفي على الكمبيوتر) */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* القائمة الجانبية للموبايل */
+.mobile-nav {
+  position: fixed;
+  top: 0; right: 0;
+  width: 280px;
+  height: 100vh;
+  background-color: white;
+  box-shadow: -4px 0 20px rgba(0,0,0,0.1);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 1500;
+  padding-top: 80px;
+}
+.mobile-nav ul {
+  padding: 0 20px;
+}
+.mobile-nav li {
+  margin: 20px 0;
+}
+.mobile-nav a {
+  font-size: 1.2rem;
+  color: #1c2d3f;
+}
+
+/* عند فتح القائمة */
+.mobile-nav.open {
+  transform: translateX(0);
+}
+
 /* البطل */
 .hero {
   background: linear-gradient(to bottom right, #f4f7fa, #e2eaf3);
@@ -180,7 +216,6 @@ ul {
 
 /* الفوتر */
 .footer {
-  
   background-color: #a84d15;
   color: white;
   padding: 25px 10px;
@@ -234,17 +269,28 @@ ul {
 
 /* استجابة الشاشة */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
   .nav-links {
-    flex-direction: column;
-    gap: 10px;
+    display: none;
+  }
+  .hamburger {
+    display: block;
   }
 
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero {
+    padding: 60px 0;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
   .footer-content {
     flex-direction: column;
     text-align: center;
-  }  
+  }
 }
