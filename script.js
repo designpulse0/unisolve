@@ -13,6 +13,14 @@ hamburger.addEventListener('click', () => {
   icon.classList.toggle('fa-times');
 });
 
+// إغلاق القائمة عند النقر خارجها
+document.addEventListener('click', (e) => {
+  if (!hamburger.contains(e.target) && !mobileNav.contains(e.target)) {
+    mobileNav.classList.remove('open');
+    hamburger.querySelector('i').classList.replace('fa-times','fa-bars');
+  }
+});
+
 // إضافة السلاسة في التمرير وإغلاق القائمة عند اختيار رابط
 document.querySelectorAll('.nav-link').forEach(link => {
   link.addEventListener('click', e => {
@@ -28,10 +36,12 @@ document.querySelectorAll('.nav-link').forEach(link => {
     const targetId = link.getAttribute('href').substring(1);
     const target = document.getElementById(targetId);
     if (target) {
-      window.scrollTo({
-        top: target.offsetTop - 60,
-        behavior: 'smooth'
-      });
+      setTimeout(() => {
+        window.scrollTo({
+          top: target.offsetTop - 60,
+          behavior: 'smooth'
+        });
+      }, 300);
     }
   });
 });
